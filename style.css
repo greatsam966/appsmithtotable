@@ -1,0 +1,123 @@
+/* ============================================================
+   SELECTION
+   ============================================================ */
+
+.appsmith-copy-selected {
+  background: rgba(38, 132, 255, 0.18) !important;
+
+  box-shadow:
+    inset 0 0 0 1px
+    rgba(38, 132, 255, 0.78) !important;
+}
+
+.appsmith-copy-anchor {
+  box-shadow:
+    inset 0 0 0 2px
+    rgba(38, 132, 255, 1) !important;
+}
+
+
+/* ============================================================
+   DRAG MODE
+   ============================================================ */
+
+body.appsmith-copy-selecting,
+body.appsmith-copy-selecting * {
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  cursor: crosshair !important;
+}
+
+
+/* ============================================================
+   TOOLBAR
+   ============================================================ */
+
+#appsmith-copy-toolbar {
+  position: fixed;
+
+  right: 20px;
+  bottom: 20px;
+
+  z-index: 2147483647;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 9px 12px;
+
+  background: white;
+
+  border: 1px solid #d4d4d8;
+  border-radius: 8px;
+
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.15);
+
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  color: #27272a;
+}
+
+.appsmith-copy-title {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.appsmith-copy-button {
+  border: 1px solid #d4d4d8;
+
+  background: white;
+  color: #27272a;
+
+  border-radius: 6px;
+
+  padding: 6px 11px;
+
+  cursor: pointer;
+
+  font-size: 13px;
+}
+
+.appsmith-copy-button:hover {
+  background: #f4f4f5;
+}
+
+.appsmith-copy-button:active {
+  background: #e4e4e7;
+}
+
+
+/* ============================================================
+   TOAST
+   ============================================================ */
+
+#appsmith-copy-toast {
+  position: fixed;
+
+  left: 50%;
+  bottom: 30px;
+
+  transform: translateX(-50%);
+
+  z-index: 2147483647;
+
+  padding: 10px 16px;
+
+  background: #18181b;
+  color: white;
+
+  border-radius: 7px;
+
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+
+  box-shadow:
+    0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+.appsmith-copy-button:disabled {
+  opacity: 0.55;
+  cursor: wait;
+}

@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Appsmith Table Copy",
+  "version": "6.0.0",
+  "description": "Smooth spreadsheet-style selection, copy and table snapshot for Appsmith.",
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "clipboardWrite"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["style.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
